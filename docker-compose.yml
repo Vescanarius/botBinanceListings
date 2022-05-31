@@ -28,7 +28,7 @@ services:
       ports:
         - $MONGODB_LOCAL_PORT:$MONGODB_DOCKER_PORT
       volumes:
-        - db:/data/db
+        - db-binancebot:/data/db
     app:
       depends_on:
         - mongodb
@@ -47,4 +47,4 @@ services:
       stdin_open: true
       tty: true
 volumes:
-     db:
+     db-binancebot:
